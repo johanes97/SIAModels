@@ -1,17 +1,31 @@
 package id.ac.unpar.siamodels;
 
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+import id.ac.unpar.siamodels.matakuliah.AIF101;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+/**
+ *
+ * @author ASUS
+ */
 public class MataKuliahTest {
-
     String kode = "123";
-    int sks = 2;
+    int sks = 5;
     String nama = "ABC";
-
+    
     public MataKuliahTest() {
         this.kode = "123";
-        this.sks = 2;
+        this.sks = 5;
         this.nama = "ABC";
     }
 
@@ -19,15 +33,12 @@ public class MataKuliahTest {
      * Test of getKode method, of class MataKuliah.
      */
     @Test
-    public void testGetKode() {
-        System.out.println("getKode");
-
-        MataKuliah instance = new MataKuliah(kode, nama, sks);
-        String expResult = kode;
+    public void testGetKode() {     
+        MataKuliahFactory mf = new MataKuliahFactory();
+        MataKuliah instance = mf.createMataKuliah("AIF101",sks,nama);
+        String expResult = "AIF101";
         String result = instance.getKode();
         assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
     }
 
     /**
@@ -35,13 +46,11 @@ public class MataKuliahTest {
      */
     @Test
     public void testGetNama() {
-        System.out.println("getNama");
-        MataKuliah instance = new MataKuliah(kode, nama, sks);
+        MataKuliahFactory mf = new MataKuliahFactory();
+        MataKuliah instance = mf.createMataKuliah(kode, sks, nama);
         String expResult = nama;
         String result = instance.getNama();
         assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
     }
 
     /**
@@ -49,13 +58,11 @@ public class MataKuliahTest {
      */
     @Test
     public void testGetSks() {
-        System.out.println("getSks");
-        MataKuliah instance = new MataKuliah(kode, nama, sks);
+        MataKuliahFactory mf = new MataKuliahFactory();
+        MataKuliah instance = mf.createMataKuliah(kode, sks, nama);
         Integer expResult = sks;
         Integer result = instance.getSks();
         assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
     }
 
     /**
@@ -63,14 +70,16 @@ public class MataKuliahTest {
      */
     @Test
     public void testEquals() {
-        System.out.println("equals");
-        Object o = new MataKuliah(kode, nama, sks);
-        MataKuliah instance = new MataKuliah(kode, nama, sks);
+        MataKuliahFactory mf = new MataKuliahFactory();
+        MataKuliah instance = mf.createMataKuliah(kode, sks, nama);
+        Object o = instance;
         boolean expResult = true;
         boolean result = instance.equals(o);
         assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
+        
+        
+        new MataKuliah() {}; //anonymous, ato ga bikin kelas yg nge extends, trs super
+        new AIF101();
     }
-
+    
 }

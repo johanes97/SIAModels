@@ -1,10 +1,25 @@
 package id.ac.unpar.siamodels;
 
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+import id.ac.unpar.siamodels.Dosen;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+/**
+ *
+ * @author ASUS
+ */
 public class DosenTest {
-
+    
     public DosenTest() {
     }
 
@@ -13,13 +28,10 @@ public class DosenTest {
      */
     @Test
     public void testGetNik() {
-        System.out.println("getNik");
-        Dosen instance = new Dosen("12345", "Tetetoet");
-        String expResult = "12345";
+        Dosen instance = new Dosen("123","ABC");
+        String expResult = "123";
         String result = instance.getNik();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
     }
 
     /**
@@ -27,12 +39,9 @@ public class DosenTest {
      */
     @Test
     public void testSetNik() {
-        System.out.println("setNik");
-        String nik = "54321";
-        Dosen instance = new Dosen("12345", "Tetetoet");
+        String nik = "321";
+        Dosen instance = new Dosen("123","ABC");
         instance.setNik(nik);
-        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
     }
 
     /**
@@ -40,13 +49,10 @@ public class DosenTest {
      */
     @Test
     public void testGetNama() {
-        System.out.println("getNama");
-        Dosen instance = new Dosen("12345", "Tetetoet");
-        String expResult = "Tetetoet";
+        Dosen instance = new Dosen("123","ABC");
+        String expResult = "ABC";
         String result = instance.getNama();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
     }
 
     /**
@@ -54,12 +60,9 @@ public class DosenTest {
      */
     @Test
     public void testSetNama() {
-        System.out.println("setNama");
-        String nama = "Teteotet";
-        Dosen instance = new Dosen("12345", "Tetetoet");
+        String nama = "CBA";
+        Dosen instance = new Dosen("123","ABC");
         instance.setNama(nama);
-        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
     }
 
     /**
@@ -67,13 +70,11 @@ public class DosenTest {
      */
     @Test
     public void testEquals() {
-        System.out.println("equals");
-        Object obj = new Dosen("12345", "Tetetoet");
-        Dosen instance = new Dosen("54321", "Teteotet");
-        boolean expResult = false;
+        Object obj = new Dosen("123","ABC");
+        Dosen instance = new Dosen("123","ABC");
+        boolean expResult = true;
         boolean result = instance.equals(obj);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
     }
+    
 }

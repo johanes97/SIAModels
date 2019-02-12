@@ -1,6 +1,6 @@
 package id.ac.unpar.siamodels;
 
-public class MataKuliah {
+public abstract class MataKuliah {
 
     private final String kode;
     private final String nama;

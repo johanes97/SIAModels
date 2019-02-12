@@ -18,8 +18,6 @@ public class TahunSemesterTest {
         Semester expResult = Semester.GANJIL;
         Semester result = instance.getSemester();
         assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
     }
 
     /**
@@ -32,8 +30,6 @@ public class TahunSemesterTest {
         int expResult = 2016;
         int result = instance.getTahun();
         assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
     }
 
     /**
@@ -46,8 +42,6 @@ public class TahunSemesterTest {
         String expResult = "161";
         String result = instance.getKodeDPS();
         assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
     }
 
     /**
@@ -61,8 +55,6 @@ public class TahunSemesterTest {
         int expResult = -1;
         int result = instance.compareTo(o);
         assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
     }
 
     /**
@@ -76,8 +68,6 @@ public class TahunSemesterTest {
         boolean expResult = true;
         boolean result = instance.equals(obj);
         assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
     }
 
     /**
@@ -90,8 +80,6 @@ public class TahunSemesterTest {
         String expResult = "TahunSemester [2016/GANJIL]";
         String result = instance.toString();
         assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
     }
 
 }
