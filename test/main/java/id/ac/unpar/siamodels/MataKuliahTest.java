@@ -66,26 +66,4 @@ public class MataKuliahTest {
         Integer result = instance.getSks();
         assertEquals(expResult, result);
     }
-
-    /**
-     * Test of equals method, of class MataKuliah.
-     */
-    @Test
-    public void testEquals() {
-        MataKuliahFactory mf = new MataKuliahFactory();
-        MataKuliah instance = mf.createMataKuliah(kode, sks, nama);
-        Object o = instance;
-        boolean expResult = true;
-        boolean result = instance.equals(o);
-        assertEquals(expResult, result);
-        
-        MataKuliahFactory mf2 = new MataKuliahFactory();
-        MataKuliah instance2 = mf2.createMataKuliah(kode, sks, nama);
-        MataKuliah instance3 = mf2.createMataKuliah("ZZZ", 4, "TES");
-        Object o2 = instance3;
-        boolean expResult2 = false;
-        boolean result2 = instance2.equals(o2);
-        assertEquals(expResult2, result2);
-    }
-    
 }
