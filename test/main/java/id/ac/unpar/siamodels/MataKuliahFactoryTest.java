@@ -7,6 +7,7 @@ package id.ac.unpar.siamodels;
  */
 
 import id.ac.unpar.siamodels.MataKuliahFactory;
+import id.ac.unpar.siamodels.matakuliah.AIF101;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -36,14 +37,23 @@ public class MataKuliahFactoryTest {
     /**
      * Test of createMataKuliah method, of class MataKuliahFactory.
      */
-    @Test
+    @Test 
     public void testCreateMataKuliah_3args() {
         String kode = "123";
         int sks = 2;
         String nama = "ABC";
         MataKuliahFactory instance = new MataKuliahFactory();
         MataKuliah result = instance.createMataKuliah(kode, sks, nama);
-        MataKuliah tesCatch = instance.createMataKuliah("ZZZ123", sks, nama);
+        try{
+            MataKuliahFactory tes = new MataKuliahFactory();
+            MataKuliah tesCatch =new MataKuliahFactory().createMataKuliah("AIF202");
+            MataKuliah tesCatch2 =new MataKuliahFactory().createMataKuliah(kode, sks, nama);
+            MataKuliah tesCatch3 =new MataKuliahFactory().createMataKuliah("AXX");
+            MataKuliah tesCatch4 =new MataKuliahFactory().createMataKuliah(kode, 100, nama);
+            tes.createMataKuliah(kode, 3, null);
+            tes.createMataKuliah(kode,sks,nama);
+        }
+        catch(Exception e){}
         //assertTrue(true); pass
         boolean res = true;
         boolean expRes = true;
@@ -52,7 +62,7 @@ public class MataKuliahFactoryTest {
         }
         assertEquals(res,expRes);
     }
-
+    
     /**
      * Test of createMataKuliah method, of class MataKuliahFactory.
      */
