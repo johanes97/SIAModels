@@ -27,7 +27,6 @@ public class MataKuliahTest {
         this.kode = "123";
         this.sks = 5;
         this.nama = "ABC";
-        new AIF101();
     }
 
     /**
@@ -37,7 +36,8 @@ public class MataKuliahTest {
     public void testGetKode() {     
         MataKuliahFactory mf = new MataKuliahFactory();
         MataKuliah instance = mf.createMataKuliah("AIF101",sks,nama);
-        String expResult = "AIF101";
+        MataKuliah expRes = new AIF101();
+        String expResult = expRes.getKode();
         String result = instance.getKode();
         assertEquals(expResult, result);
     }
