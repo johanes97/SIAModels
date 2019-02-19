@@ -49,14 +49,11 @@ public class MataKuliahTest {
      */
     @Test
     public void testGetKode() {
-        System.out.println("getKode");
-
-        MataKuliah instance = new MataKuliah(kode, nama, sks);
-        String expResult = kode;
+        MataKuliahFactory mf = new MataKuliahFactory();
+        MataKuliah instance = mf.createMataKuliah("AIF101",sks,nama);
+        String expResult = "AIF101";
         String result = instance.getKode();
         assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
     }
 
     /**
@@ -64,42 +61,22 @@ public class MataKuliahTest {
      */
     @Test
     public void testGetNama() {
-        System.out.println("getNama");
-        MataKuliah instance = new MataKuliah(kode, nama, sks);
-        String expResult = nama;
-        String result = instance.getNama();
+        MataKuliahFactory mf = new MataKuliahFactory();
+        MataKuliah instance2 = new MataKuliah(){}; //anonymous, ato ga bikin kelas yg nge extends, trs super
+        String expResult = null;
+        String result = instance2.getNama();
         assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
     }
 
-    /**
+     /**
      * Test of getSks method, of class MataKuliah.
      */
     @Test
     public void testGetSks() {
-        System.out.println("getSks");
-        MataKuliah instance = new MataKuliah(kode, nama, sks);
+        MataKuliahFactory mf = new MataKuliahFactory();
+        MataKuliah instance = mf.createMataKuliah(kode, sks, nama);
         Integer expResult = sks;
         Integer result = instance.getSks();
         assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
     }
-
-    /**
-     * Test of equals method, of class MataKuliah.
-     */
-    @Test
-    public void testEquals() {
-        System.out.println("equals");
-        Object o = new MataKuliah(kode, nama, sks);
-        MataKuliah instance = new MataKuliah(kode, nama, sks);
-        boolean expResult = true;
-        boolean result = instance.equals(o);
-        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-    }
-
 }
