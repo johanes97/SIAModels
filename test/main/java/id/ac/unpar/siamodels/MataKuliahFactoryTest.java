@@ -54,7 +54,6 @@ public class MataKuliahFactoryTest {
             tes.createMataKuliah(kode,sks,nama);
         }
         catch(Exception e){}
-        MataKuliah tesCatch = instance.createMataKuliah("ZZZ123", sks, nama);
         //assertTrue(true); pass
         boolean res = true;
         boolean expRes = true;
