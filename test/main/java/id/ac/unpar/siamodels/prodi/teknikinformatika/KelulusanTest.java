@@ -9,6 +9,7 @@ import id.ac.unpar.siamodels.Mahasiswa;
 import id.ac.unpar.siamodels.MataKuliahFactory;
 import id.ac.unpar.siamodels.TahunSemester;
 import java.time.LocalDate;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -367,7 +368,18 @@ public class KelulusanTest {
     public void testGetMkEkevalensi() {
         System.out.println("getMkEkevalensi");
         Kelulusan instance = new Kelulusan();
-        Map<String, String> expResult = null;
+        Map<String, String> expResult = new HashMap<String, String>();
+        expResult.put("AIF182105", "AIF131101");
+        expResult.put("AIF181105", "AIF131105");
+        expResult.put("AIF182101", "AIF131102");
+        expResult.put("AIF181202", "AIF132205");
+        expResult.put("AIF182106", "AIF132202");
+        expResult.put("AIF183201", "AIF132206");
+        expResult.put("AIF183303", "AIF132208");
+        expResult.put("AIF183111", "AIF132210");
+        expResult.put("AIF182210", "AIF133305");
+        expResult.put("AIF183204", "AIF133305");
+        expResult.put("AIF182204", "AIF133318");
         Map<String, String> result = instance.getMkEkevalensi();
         assertEquals(expResult, result);
     }
