@@ -54,7 +54,7 @@ public class MataKuliahTest {
         assertEquals(expResult, result);
     }
 
-      /**
+    /**
      * Test of getSks method, of class MataKuliah.
      */
     @Test
