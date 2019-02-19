@@ -39,7 +39,7 @@ public class MataKuliahTest {
         MataKuliah expRes = new AIF101();
         String expResult = expRes.getKode();
         String result = instance.getKode();
-        assertEquals(expResult,result);
+        assertEquals(expResult, result);
     }
     
     /**
