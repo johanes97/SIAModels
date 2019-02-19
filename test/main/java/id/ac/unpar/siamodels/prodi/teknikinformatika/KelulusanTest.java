@@ -9,6 +9,7 @@ import id.ac.unpar.siamodels.Mahasiswa;
 import id.ac.unpar.siamodels.MataKuliahFactory;
 import id.ac.unpar.siamodels.TahunSemester;
 import java.time.LocalDate;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -30,7 +31,6 @@ public class KelulusanTest {
      */
     @Test
     public void testCheckPrasyarat1() {
-        System.out.println("checkPrasyarat");
         Mahasiswa mahasiswa = new Mahasiswa("2016730004");
         MataKuliahFactory mkf = MataKuliahFactory.getInstance();
         MataKuliah mk = mkf.createMataKuliah("AIF11111", 4, "ADBO");
@@ -57,7 +57,6 @@ public class KelulusanTest {
      */
     @Test
     public void testCheckPrasyarat2() {
-        System.out.println("checkPrasyarat");
         Mahasiswa mahasiswa = new Mahasiswa("2016730004");
         MataKuliahFactory mkf = MataKuliahFactory.getInstance();
         MataKuliah mk = mkf.createMataKuliah("AIF11111", 4, "ADBO");
@@ -84,7 +83,6 @@ public class KelulusanTest {
      */
     @Test
     public void testCheckPrasyarat3() {
-        System.out.println("checkPrasyarat");
         Mahasiswa mahasiswa = new Mahasiswa("2016730004");
         MataKuliahFactory mkf = MataKuliahFactory.getInstance();
         MataKuliah mk = mkf.createMataKuliah("AIF11111", 4, "ADBO");
@@ -111,7 +109,6 @@ public class KelulusanTest {
      */
     @Test
     public void testCheckPrasyarat4() {
-        System.out.println("checkPrasyarat");
         Mahasiswa mahasiswa = new Mahasiswa("2016730004");
         MataKuliahFactory mkf = MataKuliahFactory.getInstance();
         MataKuliah mk = mkf.createMataKuliah("AIF11111", 4, "ADBO");
@@ -138,7 +135,6 @@ public class KelulusanTest {
      */
     @Test
     public void testCheckPrasyarat5() {
-        System.out.println("checkPrasyarat");
         Mahasiswa mahasiswa = new Mahasiswa("2016730004");
         MataKuliahFactory mkf = MataKuliahFactory.getInstance();
         MataKuliah mk = mkf.createMataKuliah("MKU180250", 2, "kewarganegaraan");
@@ -165,7 +161,6 @@ public class KelulusanTest {
      */
     @Test
     public void testCheckPrasyarat6() {
-        System.out.println("checkPrasyarat");
         Mahasiswa mahasiswa = new Mahasiswa("2019730004");
         MataKuliahFactory mkf = MataKuliahFactory.getInstance();
         MataKuliah mk = mkf.createMataKuliah("MKU180250", 2, "kewarganegaraan");
@@ -219,7 +214,6 @@ public class KelulusanTest {
      */
     @Test
     public void testCheckPrasyarat8() {
-        System.out.println("checkPrasyarat");
         Mahasiswa mahasiswa = new Mahasiswa("2014730004");
         MataKuliahFactory mkf = MataKuliahFactory.getInstance();
         MataKuliah mk = mkf.createMataKuliah("AIF181103", 3, "pemodelan untuk komputasi");
@@ -244,7 +238,6 @@ public class KelulusanTest {
      */
     @Test (expected = NullPointerException.class)
     public void testCheckPrasyarat9() {
-        System.out.println("checkPrasyarat");
         Mahasiswa mahasiswa = new Mahasiswa("2014730004");
         MataKuliahFactory mkf = MataKuliahFactory.getInstance();
         MataKuliah mk = mkf.createMataKuliah("MKU180250", 2, "kewarganegaraan");
@@ -267,7 +260,6 @@ public class KelulusanTest {
      */
     @Test
     public void testCheckPrasyarat10() {
-        System.out.println("checkPrasyarat");
         Mahasiswa mahasiswa = new Mahasiswa("2014730004");
         MataKuliahFactory mkf = MataKuliahFactory.getInstance();
         MataKuliah mk = mkf.createMataKuliah("AIF181103", 3, "pemodelan untuk komputasi");
@@ -316,7 +308,6 @@ public class KelulusanTest {
      */
     @Test
     public void testCheckPrasyarat11() {
-        System.out.println("checkPrasyarat");
         Mahasiswa mahasiswa = new Mahasiswa("2014730004");
         MataKuliahFactory mkf = MataKuliahFactory.getInstance();
         MataKuliah mk = mkf.createMataKuliah("AIF181103", 3, "pemodelan untuk komputasi");
@@ -365,9 +356,19 @@ public class KelulusanTest {
      */
     @Test
     public void testGetMkEkevalensi() {
-        System.out.println("getMkEkevalensi");
         Kelulusan instance = new Kelulusan();
-        Map<String, String> expResult = null;
+        Map<String, String> expResult = new HashMap<String, String>();
+        expResult.put("AIF182105", "AIF131101");
+        expResult.put("AIF181105", "AIF131105");
+        expResult.put("AIF182101", "AIF131102");
+        expResult.put("AIF181202", "AIF132205");
+        expResult.put("AIF182106", "AIF132202");
+        expResult.put("AIF183201", "AIF132206");
+        expResult.put("AIF183303", "AIF132208");
+        expResult.put("AIF183111", "AIF132210");
+        expResult.put("AIF182210", "AIF133305");
+        expResult.put("AIF183204", "AIF133305");
+        expResult.put("AIF182204", "AIF133318");
         Map<String, String> result = instance.getMkEkevalensi();
         assertEquals(expResult, result);
     }
