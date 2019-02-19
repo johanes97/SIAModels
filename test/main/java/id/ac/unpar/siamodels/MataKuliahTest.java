@@ -48,6 +48,7 @@ public class MataKuliahTest {
     @Test
     public void testGetNama() {
         MataKuliahFactory mf = new MataKuliahFactory();
+        //MataKuliah instance = mf.createMataKuliah(kode, sks, nama);
         MataKuliah instance2 = new MataKuliah(){}; //anonymous, ato ga bikin kelas yg nge extends, trs super
         String expResult = null;
         String result = instance2.getNama();
