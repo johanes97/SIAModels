@@ -46,14 +46,15 @@ public class MataKuliahFactoryTest {
         MataKuliah result = instance.createMataKuliah(kode, sks, nama);
         try{
             MataKuliahFactory tes = new MataKuliahFactory();
-            MataKuliah tesCatch =new MataKuliahFactory().createMataKuliah("AIF202");
-            MataKuliah tesCatch2 =new MataKuliahFactory().createMataKuliah(kode, sks, nama);
-            MataKuliah tesCatch3 =new MataKuliahFactory().createMataKuliah("AXX");
-            MataKuliah tesCatch4 =new MataKuliahFactory().createMataKuliah(kode, 100, nama);
+            // MataKuliah tesCatch =new MataKuliahFactory().createMataKuliah("AIF202");
+            // MataKuliah tesCatch2 =new MataKuliahFactory().createMataKuliah(kode, sks, nama);
+            // MataKuliah tesCatch3 =new MataKuliahFactory().createMataKuliah("AXX");
+            // MataKuliah tesCatch4 =new MataKuliahFactory().createMataKuliah(kode, 100, nama);
             tes.createMataKuliah(kode, 3, null);
             tes.createMataKuliah(kode,sks,nama);
         }
         catch(Exception e){}
+        MataKuliah tesCatch = instance.createMataKuliah("ZZZ123", sks, nama);
         //assertTrue(true); pass
         boolean res = true;
         boolean expRes = true;
