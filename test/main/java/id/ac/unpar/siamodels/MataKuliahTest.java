@@ -41,7 +41,7 @@ public class MataKuliahTest {
         String result = instance.getKode();
         assertEquals(expResult, result);
     }
-    
+
     /**
      * Test of getNama method, of class MataKuliah.
      */
