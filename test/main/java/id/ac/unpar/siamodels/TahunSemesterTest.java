@@ -1,28 +1,16 @@
 package id.ac.unpar.siamodels;
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author Johanes Irwan NPM:2016730004
- */
 public class TahunSemesterTest {
+
     /**
      * Test of getSemester method, of class TahunSemester.
      */
     @Test
     public void testGetSemester() {
-        TahunSemester instance = new TahunSemester(2016,Semester.GANJIL);
+        TahunSemester instance = new TahunSemester(2016, Semester.GANJIL);
         Semester expResult = Semester.GANJIL;
         Semester result = instance.getSemester();
         assertEquals(expResult, result);
@@ -33,7 +21,7 @@ public class TahunSemesterTest {
      */
     @Test
     public void testGetTahun() {
-        TahunSemester instance = new TahunSemester(2016,Semester.GANJIL);
+        TahunSemester instance = new TahunSemester(2016, Semester.GANJIL);
         int expResult = 2016;
         int result = instance.getTahun();
         assertEquals(expResult, result);
@@ -55,8 +43,8 @@ public class TahunSemesterTest {
      */
     @Test
     public void testCompareTo() {
-        TahunSemester o = new TahunSemester(2016,Semester.GANJIL);
-        TahunSemester instance = new TahunSemester(2015,Semester.GANJIL);
+        TahunSemester o = new TahunSemester(2016, Semester.GANJIL);
+        TahunSemester instance = new TahunSemester(2015, Semester.GANJIL);
         int expResult = -1;
         int result = instance.compareTo(o);
         assertEquals(expResult, result);
@@ -67,8 +55,8 @@ public class TahunSemesterTest {
      */
     @Test
     public void testEquals() {
-        Object obj = new TahunSemester(2016,Semester.GANJIL);
-        TahunSemester instance = new TahunSemester(2016,Semester.GANJIL);
+        Object obj = new TahunSemester(2016, Semester.GANJIL);
+        TahunSemester instance = new TahunSemester(2016, Semester.GANJIL);
         boolean expResult = true;
         boolean result = instance.equals(obj);
         assertEquals(expResult, result);
@@ -79,10 +67,10 @@ public class TahunSemesterTest {
      */
     @Test
     public void testToString() {
-        TahunSemester instance = new TahunSemester(2016,Semester.GANJIL);
+        TahunSemester instance = new TahunSemester(2016, Semester.GANJIL);
         String expResult = "TahunSemester [2016/GANJIL]";
         String result = instance.toString();
         assertEquals(expResult, result);
     }
-    
+
 }

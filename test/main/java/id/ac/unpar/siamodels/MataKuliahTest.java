@@ -22,7 +22,7 @@ public class MataKuliahTest {
     @Test
     public void testGetKode() {
         MataKuliahFactory mf = new MataKuliahFactory();
-        MataKuliah instance = mf.createMataKuliah("AIF101",sks,nama);
+        MataKuliah instance = mf.createMataKuliah("AIF101", sks, nama);
         MataKuliah expRes = new AIF101();
         String expResult = expRes.getKode();
         String result = instance.getKode();
