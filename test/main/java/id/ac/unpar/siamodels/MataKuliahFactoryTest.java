@@ -1,28 +1,13 @@
 package id.ac.unpar.siamodels;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-import id.ac.unpar.siamodels.MataKuliahFactory;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author ASUS
- */
 public class MataKuliahFactoryTest {
-    
+
     public MataKuliahFactoryTest() {
     }
-    
+
     /**
      * Test of getInstance method, of class MataKuliahFactory.
      */
@@ -47,10 +32,10 @@ public class MataKuliahFactoryTest {
         //assertTrue(true); pass
         boolean res = true;
         boolean expRes = true;
-        if(!result.getKode().equalsIgnoreCase(kode) || result.getSks() != sks || !result.getNama().equalsIgnoreCase(nama) ){
+        if (!result.getKode().equalsIgnoreCase(kode) || result.getSks() != sks || !result.getNama().equalsIgnoreCase(nama)) {
             res = false;
         }
-        assertEquals(res,expRes);
+        assertEquals(res, expRes);
     }
 
     /**
@@ -64,13 +49,13 @@ public class MataKuliahFactoryTest {
         MataKuliahFactory instance = new MataKuliahFactory();
         instance.createMataKuliah(kode, sks, nama);
         MataKuliah result = instance.createMataKuliah(kode);
-        
+
         boolean res = true;
         boolean expRes = true;
-        if(!result.getKode().equalsIgnoreCase(kode) || result.getSks() != sks || !result.getNama().equalsIgnoreCase(nama) ){
+        if (!result.getKode().equalsIgnoreCase(kode) || result.getSks() != sks || !result.getNama().equalsIgnoreCase(nama)) {
             res = false;
         }
-        assertEquals(res,expRes);
+        assertEquals(res, expRes);
     }
-    
+
 }
