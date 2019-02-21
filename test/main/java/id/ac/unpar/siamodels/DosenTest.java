@@ -24,7 +24,7 @@ public class DosenTest {
     }
 
     /**
-     * Test of getNik method, of class Dosen.
+     * Test of getNik method, tes untuk mendapatkan NIK.
      */
     @Test
     public void testGetNik() {
@@ -35,7 +35,7 @@ public class DosenTest {
     }
 
     /**
-     * Test of setNik method, of class Dosen.
+     * Test of setNik method, tes untuk set nik.
      */
     @Test
     public void testSetNik() {
@@ -45,7 +45,7 @@ public class DosenTest {
     }
 
     /**
-     * Test of getNama method, of class Dosen.
+     * Test of getNama method, tes untuk mendapatkan nama.
      */
     @Test
     public void testGetNama() {
@@ -56,7 +56,7 @@ public class DosenTest {
     }
 
     /**
-     * Test of setNama method, of class Dosen.
+     * Test of setNama method, tes nama dari dosen.
      */
     @Test
     public void testSetNama() {
@@ -66,7 +66,7 @@ public class DosenTest {
     }
 
     /**
-     * Test of equals method, of class Dosen.
+     * Test of equals method, men compare dosen yang sama.
      */
     @Test
     public void testEqualsTrue() {
@@ -78,7 +78,7 @@ public class DosenTest {
     }
     
     /**
-     * Test of equals method, of class Dosen.
+     * Test of equals method, tes men compare yang null.
      */
     @Test
     public void testEqualsNull() {
@@ -93,7 +93,7 @@ public class DosenTest {
     }
     
     /**
-     * Test of equals method, of class Dosen.
+     * Test of equals method, tes menggunakan objek yang sama.
      */
     @Test
     public void testEqualsThisObj() {
@@ -108,7 +108,7 @@ public class DosenTest {
     }
     
     /**
-     * Test of equals method, of class Dosen.
+     * Test of equals method, tes menggunakan objek null.
      */
     @Test
     public void testEqualsThisObjNull() {
@@ -123,7 +123,7 @@ public class DosenTest {
     }
     
     /**
-     * Test of equals method, of class Dosen.
+     * Test of equals method, tes objek yang berbeda.
      */
     @Test
     public void testEqualsGetClassDifferentObject() {
@@ -138,7 +138,7 @@ public class DosenTest {
     }
     
     /**
-     * Test of equals method, of class Dosen.
+     * Test of equals method, NIK tidak null.
      */
     @Test
     public void testEqualsNIKNotNull() {
@@ -153,7 +153,7 @@ public class DosenTest {
     }
     
     /**
-     * Test of equals method, of class Dosen.
+     * Test of equals method, yang namanya tidak null.
      */
     @Test
     public void testEqualsNamaNotNull() {
@@ -168,7 +168,7 @@ public class DosenTest {
     }
     
     /**
-     * Test of equals method, of class Dosen.
+     * Test of equals method, yang false dan berbeda dosennya.
      */
     @Test
     public void testEqualsFalse() {
