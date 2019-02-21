@@ -2,8 +2,8 @@ package id.ac.unpar.siamodels;
 
 import id.ac.unpar.siamodels.matakuliah.AIF101;
 import org.junit.Test;
-import static org.junit.Assert.*;
 import org.junit.Before;
+import static org.junit.Assert.*;
 
 public class MataKuliahTest {
 
