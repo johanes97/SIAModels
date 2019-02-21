@@ -1,25 +1,12 @@
 package id.ac.unpar.siamodels;
 
-import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class NilaiTest {
 
     Mahasiswa.Nilai nilai1, nilai2, nilai3, nilai4, nilai5, nilai6, nilai7, nilai8, nilai9, nilai10, nilai11, nilai12, nilai13;
-
-    @BeforeClass
-    public static void setUpClass() {
-
-    }
-
-    @AfterClass
-    public static void tearDownClass() {
-
-    }
 
     @Before
     public void setUp() {
@@ -39,11 +26,6 @@ public class NilaiTest {
         nilai11 = new Mahasiswa.Nilai(thnSemester1, pbo, "K");
         nilai12 = new Mahasiswa.Nilai(thnSemester1, pbo, "");
         nilai13 = new Mahasiswa.Nilai(thnSemester1, pbo, "Z");
-    }
-
-    @After
-    public void tearDown() {
-
     }
 
     @Test

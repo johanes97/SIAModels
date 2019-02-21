@@ -3,14 +3,16 @@ package id.ac.unpar.siamodels;
 import id.ac.unpar.siamodels.matakuliah.AIF101;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.Before;
 
 public class MataKuliahTest {
 
-    String kode = "123";
-    int sks = 5;
-    String nama = "ABC";
+    protected String kode;
+    protected int sks;
+    protected String nama;
 
-    public MataKuliahTest() {
+    @Before
+    public void setUp() {
         this.kode = "123";
         this.sks = 5;
         this.nama = "ABC";
@@ -22,7 +24,7 @@ public class MataKuliahTest {
     @Test
     public void testGetKode() {
         MataKuliahFactory mf = new MataKuliahFactory();
-        MataKuliah instance = mf.createMataKuliah("AIF101", sks, nama);
+        MataKuliah instance = mf.createMataKuliah("AIF101", this.sks, this.nama);
         MataKuliah expRes = new AIF101();
         String expResult = expRes.getKode();
         String result = instance.getKode();
@@ -49,8 +51,8 @@ public class MataKuliahTest {
     @Test
     public void testGetSks() {
         MataKuliahFactory mf = new MataKuliahFactory();
-        MataKuliah instance = mf.createMataKuliah(kode, sks, nama);
-        Integer expResult = sks;
+        MataKuliah instance = mf.createMataKuliah(this.kode, this.sks, this.nama);
+        Integer expResult = this.sks;
         Integer result = instance.getSks();
         assertEquals(expResult, result);
     }
