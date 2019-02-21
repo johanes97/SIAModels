@@ -55,115 +55,115 @@ public class DosenTest {
      */
     @Test
     public void testEqualsTrue() {
-        Object obj = new Dosen("123","ABC");
-        Dosen instance = new Dosen("123","ABC");
+        Object obj = new Dosen("123", "ABC");
+        Dosen instance = new Dosen("123", "ABC");
         boolean expResult = true;
         boolean result = instance.equals(obj);
         assertEquals(expResult, result);
     }
-    
+
     /**
      * Test of equals method, tes men compare yang null.
      */
     @Test
     public void testEqualsNull() {
-        try{
-            Object obj = new Dosen(null,null);
-            Dosen instance = new Dosen(null,null);
+        try {
+            Object obj = new Dosen(null, null);
+            Dosen instance = new Dosen(null, null);
             boolean expResult = true;
             boolean result = instance.equals(obj);
             assertEquals(expResult, result);
+        } catch (Exception e) {
         }
-        catch(Exception e){}
     }
-    
+
     /**
      * Test of equals method, tes menggunakan objek yang sama.
      */
     @Test
     public void testEqualsThisObj() {
-        try{
-            Object obj = new Dosen("123","ABC");
-            Dosen instance = (Dosen)obj;
+        try {
+            Object obj = new Dosen("123", "ABC");
+            Dosen instance = (Dosen) obj;
             boolean expResult = true;
             boolean result = obj.equals(instance);
             assertEquals(expResult, result);
+        } catch (Exception e) {
         }
-        catch(Exception e){}
     }
-    
+
     /**
      * Test of equals method, tes menggunakan objek null.
      */
     @Test
     public void testEqualsThisObjNull() {
-        try{
+        try {
             Object obj = null;
-            Dosen instance = new Dosen("123","ABC");
+            Dosen instance = new Dosen("123", "ABC");
             boolean expResult = false;
             boolean result = instance.equals(obj);
             assertEquals(expResult, result);
+        } catch (Exception e) {
         }
-        catch(Exception e){}
     }
-    
+
     /**
      * Test of equals method, tes objek yang berbeda.
      */
     @Test
     public void testEqualsGetClassDifferentObject() {
-        try{
+        try {
             Object obj = new Object();
-            Dosen instance = new Dosen("123","ABC");
+            Dosen instance = new Dosen("123", "ABC");
             boolean expResult = false;
             boolean result = instance.equals(obj);
             assertEquals(expResult, result);
+        } catch (Exception e) {
         }
-        catch(Exception e){}
     }
-    
+
     /**
      * Test of equals method, NIK tidak null.
      */
     @Test
     public void testEqualsNIKNotNull() {
-        try{
-            Dosen dosenTest = new Dosen("123","ABC");
-            Dosen instance = new Dosen("123","ABC");
+        try {
+            Dosen dosenTest = new Dosen("123", "ABC");
+            Dosen instance = new Dosen("123", "ABC");
             boolean expResult = true;
             boolean result = instance.equals(dosenTest);
             assertEquals(expResult, result);
+        } catch (Exception e) {
         }
-        catch(Exception e){}
     }
-    
+
     /**
      * Test of equals method, yang namanya tidak null.
      */
     @Test
     public void testEqualsNamaNotNull() {
-        try{
-            Dosen dosenTest = new Dosen(null,"ABC");
-            Dosen instance = new Dosen(null,"ABC");
+        try {
+            Dosen dosenTest = new Dosen(null, "ABC");
+            Dosen instance = new Dosen(null, "ABC");
             boolean expResult = true;
             boolean result = instance.equals(dosenTest);
             assertEquals(expResult, result);
+        } catch (Exception e) {
         }
-        catch(Exception e){}
     }
-    
+
     /**
      * Test of equals method, yang false dan berbeda dosennya.
      */
     @Test
     public void testEqualsFalse() {
-        try{
-            Dosen dosenTest = new Dosen(null,"ABC");
-            Dosen instance = new Dosen("123",null);
+        try {
+            Dosen dosenTest = new Dosen(null, "ABC");
+            Dosen instance = new Dosen("123", null);
             boolean expResult = false;
             boolean result = instance.equals(dosenTest);
             assertEquals(expResult, result);
+        } catch (Exception e) {
         }
-        catch(Exception e){}
     }
 }
