@@ -29,7 +29,7 @@ public class MataKuliahFactoryTest {
         MataKuliahFactory instance = new MataKuliahFactory();
         MataKuliah result = instance.createMataKuliah(kode, sks, nama);
         try{
-            MataKuliahFactory tes = new MataKuliahFactory();//
+            MataKuliahFactory tes = new MataKuliahFactory();
 //            MataKuliah tesCatch =new MataKuliahFactory().createMataKuliah("AIF202");
 //            MataKuliah tesCatch2 =new MataKuliahFactory().createMataKuliah(kode, sks, nama);
 //            MataKuliah tesCatch3 =new MataKuliahFactory().createMataKuliah("AXX");
