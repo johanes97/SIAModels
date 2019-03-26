@@ -189,7 +189,6 @@ public class KelulusanTest {
      */
     @Test
     public void testCheckPrasyarat7() {
-        System.out.println("checkPrasyarat");
         Mahasiswa mahasiswa = new Mahasiswa("2017730004");
         MataKuliahFactory mkf = MataKuliahFactory.getInstance();
         MataKuliah mk = mkf.createMataKuliah("MKU180250", 2, "kewarganegaraan");

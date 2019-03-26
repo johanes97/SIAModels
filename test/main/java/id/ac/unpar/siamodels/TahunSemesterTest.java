@@ -5,10 +5,6 @@ package id.ac.unpar.siamodels;
  * and open the template in the editor.
  */
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -79,7 +75,7 @@ public class TahunSemesterTest {
         assertEquals(expResult, result);
     }
     /**
-     * Test of getTahun method, of class TahunSemester.
+     * Test of getTahun method untuk mengembalikan tahun masuk kuliah, of class TahunSemester.
      */
     @Test
     public void testGetTahun() {
@@ -90,7 +86,7 @@ public class TahunSemesterTest {
     }
     
     /**
-     * Test of getKodeDPS method, of class TahunSemester.
+     * Test of getKodeDPS method untuk mengembalikan tahun dan semester, of class TahunSemester.
      */
     @Test
     public void testGetKodeDPS1() {
@@ -111,7 +107,7 @@ public class TahunSemesterTest {
     }
     
     /**
-     * Test of getKodeDPS method, of class TahunSemester.
+     * Test of getKodeDPS method untuk mengetest jika mahasiswa tidak dalam semester, of class TahunSemester.
      */
     @Test (expected=NullPointerException.class)
     public void testGetKodeDPS3() {
@@ -121,7 +117,7 @@ public class TahunSemesterTest {
         assertEquals(expResult, result);
     }
     /**
-     * Test of compareTo method, of class TahunSemester.
+     * Test of compareTo method untuk membandingkan apakah tahun semester sama atau berbeda, of class TahunSemester.
      */
     @Test
     public void testCompareTo() {
@@ -132,31 +128,30 @@ public class TahunSemesterTest {
         assertEquals(expResult, result);
     }
     /**
-     * Test of compareTo method, of class TahunSemester.
+     * Test of compareTo2 method untuk membandingkan apakah tahun semester sama atau berbeda, of class TahunSemester.
      */
-    @Test
+    @Test (expected=IllegalArgumentException.class)
     public void testCompareTo2() {
-        TahunSemester o = new TahunSemester(2016,Semester.GANJIL);
-        TahunSemester instance = new TahunSemester(2015,Semester.GANJIL);
+        TahunSemester o = new TahunSemester("2012003");
+        TahunSemester instance = new TahunSemester(2009003,Semester.GANJIL);
         int expResult = -1;
         int result = instance.compareTo(o);
         assertEquals(expResult, result);
     }
-
     /**
-     * Test of equals method, of class TahunSemester.
+     * Test of equals method untuk mengetes kesamaan tahun semester satu dengan tahun semester lainnya, of class TahunSemester.
      */
     @Test
     public void testEquals() {
-        Object obj = new TahunSemester(2016,Semester.GANJIL);
-        TahunSemester instance = new TahunSemester(2016,Semester.GANJIL);
-        boolean expResult = true;
-        boolean result = instance.equals(obj);
+        Object o = new Dosen("2012009","Budi");
+        TahunSemester instance = new TahunSemester(2009003,Semester.GANJIL);
+        boolean expResult = false;
+        boolean result = instance.equals(o);
         assertEquals(expResult, result);
     }
 
     /**
-     * Test of toString method, of class TahunSemester.
+     * Test of toString method untuk menampilkan tahun semester dan semester tertentu , of class TahunSemester.
      */
     @Test
     public void testToString() {
