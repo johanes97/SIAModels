@@ -72,26 +72,6 @@ public class MahasiswaTest {
         instance.getRiwayatNilai().add(nilaiPSC2);
     }
 
-    @BeforeClass
-    public static void setUpClass() {
-
-    }
-
-    @AfterClass
-    public static void tearDownClass() {
-
-    }
-
-    @Before
-    public void setUp() {
-
-    }
-
-    @After
-    public void tearDown() {
-
-    }
-
     @Test(expected = NumberFormatException.class)
     /**
      * mengetes exception jika saat instansiasi Mahasiswa NPM yang dimasukan
