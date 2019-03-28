@@ -12,6 +12,6 @@ lalu
 
 buka folder **target\site**, test report terdapat pada file **surefire-report.html**
 
-**Update 28 Maret 2019:** test plan sedang diusahakan untuk bisa digenerate lewat maven
-
 Usahakan versi jdk 1.8.3
+
+**Update 28 Maret 2019:** test plan sedang diusahakan untuk bisa digenerate lewat maven
