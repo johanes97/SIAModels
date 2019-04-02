@@ -72,28 +72,28 @@ public class MahasiswaTest {
         instance.getRiwayatNilai().add(nilaiPSC2);
     }
 
-    @Test(expected = NumberFormatException.class)
-    /**
+	/**
      * mengetes exception jika saat instansiasi Mahasiswa NPM yang dimasukan
      * tidak valid
      */
+    @Test(expected = NumberFormatException.class)
     public void testMahasiswaNumberFormatException() {
         Mahasiswa test = new Mahasiswa("01asdj-123");
     }
 
-    @Test
-    /**
+	/**
      * mengetest method: void setPhotoPath(String photoPath)
      */
+    @Test
     public void testSetPhotoPath() {
         Mahasiswa test = new Mahasiswa("2016730070");
         test.setPhotoPath("https://studentportal.unpar.ac.id/user/2016730070/photo/image.jpg");
     }
 
-    @Test
-    /**
+	/**
      * Mengetes method: String getPhotoPath()
      */
+    @Test
     public void testGetPhotoPath() {
         Mahasiswa test = new Mahasiswa("2016730070");
         test.setPhotoPath("https://studentportal.unpar.ac.id/user/2016730070/photo/image.jpg");
@@ -128,11 +128,10 @@ public class MahasiswaTest {
         return list;
     }
 
-    @Test
-    /**
-     * mengetes method : void setJadwalKuliahList(List<JadwalKuliah>
-     * jadwalKuliahList)
+	/**
+     * mengetes method : void setJadwalKuliahList
      */
+    @Test
     public void testSetJadwalKuliahList() {
         Mahasiswa test = new Mahasiswa("2016730070");
         test.setJadwalKuliahList(this.getDummyJadwalKuliah());
@@ -150,10 +149,10 @@ public class MahasiswaTest {
         assertEquals(expectedResult, result);
     }
 
-    @Test
-    /**
+	/**
      * mengetes konversi NPM ke tahun angkatan
      */
+    @Test
     public void testGetTahunAngkatan() {
         Mahasiswa instance = new Mahasiswa("2016730070");
         int expectedResult = 2016;
@@ -172,20 +171,20 @@ public class MahasiswaTest {
         return nilaiTOEFL;
     }
 
-    @Test
-    /**
-     * mengetes method setNilaiTOEFL(SortedMap<LocalDate, Integer>)
+	/**
+     * mengetes method setNilaiTOEFL
      */
+    @Test
     public void testSetNilaiTOEFL() {
         Mahasiswa instance = new Mahasiswa("2016730070");
 
         instance.setNilaiTOEFL(this.getDummyTOEFLData());
     }
 
-    @Test
-    /**
-     * mengetes method SortedMap<LocalDate, Integer> getNilaiTOEFL()
+	/**
+     * mengetes method getNilaiTOEFL()
      */
+    @Test
     public void testGetNilaiTOEFL() {
         Mahasiswa test = new Mahasiswa("2016730070");
         test.setNilaiTOEFL(this.getDummyTOEFLData());
@@ -201,10 +200,10 @@ public class MahasiswaTest {
         assertEquals("Irvan Hardyanto", test.getNama());
     }
 
-    @Test
-    /**
+	/**
      * mengetes method toString milik kelas Mahasiswa
      */
+    @Test
     public void testToString() {
         Mahasiswa test = new Mahasiswa("2016730070");
         test.setNama("Irvan Hardyanto");
@@ -213,11 +212,11 @@ public class MahasiswaTest {
         assertEquals(expectedResult, result);
     }
 
-    @Test
-    /**
+	/**
      * Mengetes method getEmailAddress(): String Pada mahasiswa angkatan 2016 ke
      * bawah
      */
+    @Test
     public void testGetEmailAddress() {
         Mahasiswa test = new Mahasiswa("2016730070");
         String expectedResult = "7316070@student.unpar.ac.id";
@@ -225,31 +224,31 @@ public class MahasiswaTest {
         assertEquals(expectedResult, result);
     }
 
-    @Test
-    /**
+	/**
      * Mengetes method getEmailAddress(): String Pada mahasiswa angkatan 2017
      */
+    @Test
     public void testGetEmailAddress2017() {
         Mahasiswa test = new Mahasiswa("2017730070");
         String expectedResult = "2017730070@student.unpar.ac.id";
         String result = test.getEmailAddress();
     }
 
-    @Test
-    /**
+	/**
      * Mengetes method calculateIPKumulatif
      */
+    @Test
     public void testCalculateIPKumulatif() {
         Double expectedResult = 3.0;
         Double result = instance.calculateIPKumulatif();
         assertEquals(expectedResult, result);
     }
 
-    @Test
-    /**
+	/**
      * Mengetes method calculate IPKumulatif pada objek mahasiswa yang riwayat
      * nilai nya kosong
      */
+    @Test
     public void testCalculateIPKumulatifNaN() {
         Mahasiswa test = new Mahasiswa("2016730070");
         Double expectedResult = Double.NaN;
@@ -257,11 +256,11 @@ public class MahasiswaTest {
         assertEquals(expectedResult, result);
     }
 
-    @Test
-    /**
+	/**
      * mengetes method calculateIPKumulatif pada objek mahasiswa yang tidak
      * memiliki nilai akhir
      */
+    @Test
     public void testCalculateIPKumulatifNull() {
         Mahasiswa test = new Mahasiswa("2016730070");
         List<Mahasiswa.Nilai> listNilai = new ArrayList<>();
@@ -283,52 +282,52 @@ public class MahasiswaTest {
         assertEquals(expectedResult, result);
     }
 
-    @Test
-    /**
+	/**
      * Mengetes method calculateIPLulus
      */
+    @Test
     public void testCalculateIPLulus() {
         Double expectedResult = 96.0 / 28.0;
         Double result = instance.calculateIPLulus();
         assertEquals(expectedResult, result);
     }
 
-    @Test
-    /**
+	/**
      * Mengetes method calculateIPS
      */
+    @Test
     public void testCalculateIPS() {
         Double expectedResult = 4.0;
         Double result = instance.calculateIPS();
         assertEquals(expectedResult, result);
     }
 
-    @Test(expected = ArrayIndexOutOfBoundsException.class)
-    /**
+	/**
      * Mengetes method calculateIPS pada mahasiswa yang riwayat nilai nya kosong
      */
+    @Test(expected = ArrayIndexOutOfBoundsException.class)
     public void testCalculateIPSErrorArrayOutOfBound() {
         Mahasiswa test = new Mahasiswa("2016730070");
         test.calculateIPS();
     }
 
-    @Test
-    /**
+	/**
      * Mengetes method calculateIPTempuh(boolean lulusSaja) dengan parameter
      * lulusSaja bernilai true
      */
+    @Test
     public void testCalculateIPTempuhTrue() {
         Double expectedResult = 96 / 28.0;
         Double result = instance.calculateIPTempuh(true);
         assertEquals(expectedResult, result);
     }
 
-    @Test
-    /**
+	/**
      * Mengetes method calculateIPTempuh(boolean lulusSaja) dengan parameter
      * lulusSaja bernilai false, pada mahasiswa yang tidak memiliki nilai akhir
      * pada mata kuliah yang diambil
      */
+    @Test
     public void testCalculateIPTempuhNull() {
         Mahasiswa test = new Mahasiswa("2016730070");
         List<Mahasiswa.Nilai> listNilai = new ArrayList<>();
@@ -350,11 +349,11 @@ public class MahasiswaTest {
         assertEquals(expectedResult, result);
     }
 
-    @Test
-    /**
+	/**
      * Mengetes method calculateIPTempuh(boolean lulusSaja) pada objek mahasiswa
      * yang riwayat nilainya kosong.
      */
+    @Test
     public void testCalculateIPTempuhNaN() {
         Mahasiswa test = new Mahasiswa("2016730070");
         Double expectedResult = Double.NaN;
@@ -362,55 +361,55 @@ public class MahasiswaTest {
         assertEquals(expectedResult, result);
     }
 
-    @Test
-    /**
+	/**
      * Mengetes method calculateIPTempuh(boolean lulusSaja) dengan parameter
      * lulusSaja bernilai false
      */
+    @Test
     public void testCalculateIPTempuhFalse() {
         Double expectedResult = 96 / 28.0;
         Double result = instance.calculateIPTempuh(false);
         assertEquals(expectedResult, result);
     }
 
-    @Test
-    /**
+	/**
      * Mengetest method calculateSKSLulus
      */
+    @Test
     public void testCalculateSKSLulus() {
         int expectedResult = 28;
         int result = instance.calculateSKSLulus();
         assertEquals(expectedResult, result);
     }
 
-    @Test
-    /**
+	/**
      * Mengetes method calculateSKSTempuh(boolean lulusSaja) dengan parameter
      * lulusSaja = true
      */
+    @Test
     public void testCalculateSKSTempuhTrue() {
         int expectedResult = 28;
         int result = instance.calculateSKSTempuh(true);
         assertEquals(expectedResult, result);
     }
 
-    @Test
-    /**
+	/**
      * Mengetes method calculateSKSTempuh(boolean lulusSaja) dengan parameter
      * lulusSaja = false
      */
+    @Test
     public void testCalculateSKSTempuhFalse() {
         int expectedResult = 28;
         int result = instance.calculateSKSTempuh(false);
         assertEquals(expectedResult, result);
     }
 
-    @Test
-    /**
+	/**
      * Mengetes method calculateSKSTempuh(boolean lulusSaja) dengan parameter
      * lulusSaja bernilai false pada mahasiswa yang tidak memiliki nilai akhir
      * di seluruh mata kuliah yang diambil
      */
+    @Test
     public void testCalculateSKSTempuhNull() {
         Mahasiswa test = new Mahasiswa("2016730070");
         List<Mahasiswa.Nilai> listNilai = new ArrayList<>();
@@ -433,10 +432,10 @@ public class MahasiswaTest {
         assertEquals(expectedResult, result);
     }
 
-    @Test
-    /**
-     * Test method calculateTahunSemesterAktif():Set<TahunSemester>
+	/**
+     * Test method calculateTahunSemesterAktif()
      */
+    @Test
     public void testCalculateTahunSemesterAktif() {
         TahunSemester thnSemester1 = new TahunSemester("161");
         TahunSemester thnSemester2 = new TahunSemester("162");
@@ -453,10 +452,10 @@ public class MahasiswaTest {
         assertEquals(result, expectedResult);
     }
 
-    @Test
-    /**
+	/**
      * test untuk mata kuliah yang sudah lulus
      */
+    @Test
     public void testHasLulusMataKuliahWithRiwayatNilai() {
         assertEquals(true, instance.hasLulusKuliah("AIF101"));
         assertEquals(true, instance.hasLulusKuliah("AIF103"));
@@ -467,10 +466,10 @@ public class MahasiswaTest {
         assertEquals(true, instance.hasLulusKuliah("AIF302"));
     }
 
-    @Test
-    /**
+	/**
      * test dengan objek mahasiswa yang belum memiliki riwayat nilai
      */
+    @Test
     public void testHasLulusMataKuliahWithoutRiwayatNilai() {
         Mahasiswa instance = new Mahasiswa("2016730070");
         boolean expectedResult = false;
@@ -478,10 +477,10 @@ public class MahasiswaTest {
         assertEquals(expectedResult, result);
     }
 
-    @Test
-    /**
+	/**
      * Mengetest method: boolean hasTempuhKuliah(String kodeMataKuliah)
      */
+    @Test
     public void testHasTempuhMataKuliah() {
         assertEquals(true, instance.hasTempuhKuliah("AIF101"));
         assertEquals(true, instance.hasTempuhKuliah("AIF103"));
@@ -492,11 +491,11 @@ public class MahasiswaTest {
         assertEquals(true, instance.hasTempuhKuliah("AIF302"));
     }
 
-    @Test
-    /**
+	/**
      * test method hasTempuhKuliah(String kodeMataKuliah) pada objek mahasiswa
      * yang belum memiliki riwayat nilai
      */
+    @Test
     public void testHasTempuhMataKuliahWithoutRiwayatNilai() {
         Mahasiswa test = new Mahasiswa("2016730070");
         boolean result = test.hasTempuhKuliah("AIF301");
@@ -504,20 +503,20 @@ public class MahasiswaTest {
         assertEquals(expectedResult, result);
     }
 
-    @Test
-    /**
-     * test dengan objek mahasiswa yang sudah memiliki riwayat nilai
+	/**
+     * test method Double getNilaiAkhirMataKuliah(String mataKuliah) dengan objek mahasiswa yang sudah memiliki riwayat nilai
      */
+    @Test
     public void testGetNilaiAkhirMataKuliahWithRiwayatNilai() {
         Double expectedResult = 0.00;
         Double result = instance.getNilaiAkhirMataKuliah("AIF302");
         assertEquals(expectedResult, result);
     }
 
-    @Test
-    /**
-     * test dengan objek mahasiswa yang BELUM memiliki riwayat nilai
+	/**
+     * test method Double getNilaiAkhirMataKuliah(String mataKuliah) dengan objek mahasiswa yang BELUM memiliki riwayat nilai
      */
+    @Test
     public void testGetNilaiAkhirMataKuliahWithoutRiwayatNilai() {
         Mahasiswa instance = new Mahasiswa("2016730070");
         Double expectedResult = 0.0;
@@ -525,10 +524,10 @@ public class MahasiswaTest {
         assertEquals(expectedResult, result);
     }
 
-    @Test
-    /**
+	/**
      * test dengan objek mahasiswa yang BELUM memiliki riwayat nilai
      */
+    @Test
     public void testCalculateIPKLulus() {
         try {
             double temp = instance.calculateIPKLulus();
@@ -542,10 +541,10 @@ public class MahasiswaTest {
         }
     }
 
-    @Test
-    /**
+	/**
      * test dengan objek mahasiswa yang BELUM memiliki riwayat nilai
      */
+    @Test
     public void testCalculateIPKTempuh() {
         try {
             double temp = instance.calculateIPKTempuh(true);
