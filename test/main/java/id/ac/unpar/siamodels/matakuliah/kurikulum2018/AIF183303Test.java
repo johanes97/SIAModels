@@ -11,44 +11,44 @@ import id.ac.unpar.siamodels.MataKuliahFactory;
 import id.ac.unpar.siamodels.TahunSemester;
 import java.util.LinkedList;
 import java.util.List;
-import static org.junit.Assert.assertEquals;
 import org.junit.Test;
+import static org.junit.Assert.*;
 
 /**
  *
  * @author User
  */
-public class AIF182204Test {
+public class AIF183303Test {
     /**
-     * method testCheckPrasyarat ini untuk mengetes jika mahasiswa boleh mengambil matakuliah Pemrograman Berbasis Web
+     * method testCheckPrasyarat ini untuk mengetes jika mahasiswa boleh mengambil matakuliah Rekayasa Perangkat Lunak
      */
     @Test
     public void testCheckPrasyarat() {
-        AIF182302 mibd = new AIF182302();
-        AIF182204 pbw = new AIF182204();
+        AIF183303 rpl = new AIF183303();
+        AIF182100 adpl = new AIF182100();
         Mahasiswa mahasiswa = new Mahasiswa("2018730004");
         MataKuliahFactory mkf = MataKuliahFactory.getInstance();
-        MataKuliah mk = mkf.createMataKuliah("AIF182302", 4, "Manajemen Informasi dan Basis Data");
+        MataKuliah mk = mkf.createMataKuliah("AIF182100", 4, "Analisis Desain Perangkat Lunak");
         TahunSemester ts = new TahunSemester("181");
         Mahasiswa.Nilai nilai = new Mahasiswa.Nilai(ts, mk, "A");
         mahasiswa.getRiwayatNilai().add(nilai);
         List<String> reasonsContainer = new LinkedList<String>();
         boolean expRes = true;
-        boolean res = pbw.checkPrasyarat(mahasiswa, reasonsContainer);
+        boolean res = rpl.checkPrasyarat(mahasiswa, reasonsContainer);
         assertEquals(expRes, res);
     }
     /**
-     * method testCheckPrasyarat2 ini untuk mengetes jika mahasiswa belum boleh mengambil matakuliah Pemrograman Berbasis Web
+     * method testCheckPrasyarat2 ini untuk mengetes jika mahasiswa belum boleh mengambil matakuliah Rekayasa Perangkat Lunak
      */
     @Test
     public void testCheckPrasyarat2() {
-        AIF182204 pbw = new AIF182204();
+        AIF183303 rpl = new AIF183303();
         Mahasiswa mahasiswa = new Mahasiswa("2018730004");
         MataKuliahFactory mkf = MataKuliahFactory.getInstance();
         TahunSemester ts = new TahunSemester("181");
         List<String> reasonsContainer = new LinkedList<String>();
         boolean expRes = false;
-        boolean res = pbw.checkPrasyarat(mahasiswa, reasonsContainer);
+        boolean res = rpl.checkPrasyarat(mahasiswa, reasonsContainer);
         assertEquals(expRes, res);
     }
 }
