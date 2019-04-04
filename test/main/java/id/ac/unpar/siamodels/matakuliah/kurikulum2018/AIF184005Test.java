@@ -13,9 +13,11 @@ import static org.junit.Assert.*;
  * @author ASUS
  */
 public class AIF184005Test {
-    
-    public AIF184005Test() {
+    /**
+     * method makeMataKuliah untuk membuat kelas matakuliah AIF184005
+     */
+    @Test
+    public void makeMataKuliah() {
         new AIF184005();
     }
-
 }

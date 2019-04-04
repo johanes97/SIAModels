@@ -10,14 +10,14 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author ASUS
+ * @author User
  */
-public class AIF183337Test {
+public class AIF183128Test {
     /**
-     * method makeMataKuliah untuk membuat kelas matakuliah AIF183337
+     * method makeMataKuliah untuk membuat kelas matakuliah AIF183128
      */
     @Test
     public void makeMataKuliah() {
-        new AIF183337();
+        new AIF183128();
     }
 }
