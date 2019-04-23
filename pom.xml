@@ -23,6 +23,9 @@
                 <configuration>
                     <destFile>${basedir}/target/coverage-reports/jacoco-unit.exec</destFile>
                     <dataFile>${basedir}/target/coverage-reports/jacoco-unit.exec</dataFile>
+					<excludes>
+						<exclude>**/id/ac/unpar/siamodels/matakuliah</exclude>
+					</excludes>
                 </configuration>
                 <executions>
                     <execution>
@@ -71,6 +74,9 @@
                 <configuration>
                     <destFile>${basedir}/target/coverage-reports/jacoco-unit.exec</destFile>
                     <dataFile>${basedir}/target/coverage-reports/jacoco-unit.exec</dataFile>
+					<excludes>
+						<exclude>id/ac/unpar/siamodels/matakuliah/*</exclude>
+					</excludes>
                 </configuration>
 			</plugin>
 			<plugin>
