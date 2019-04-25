@@ -9,11 +9,12 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.10</version>
+            <version>4.11</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
-    
+	<name>Proyek Informatika</name>
+	<url>http://maven.apache.org</url>
     <build>
         <plugins>
             <plugin>
@@ -24,7 +25,7 @@
                     <destFile>${basedir}/target/coverage-reports/jacoco-unit.exec</destFile>
                     <dataFile>${basedir}/target/coverage-reports/jacoco-unit.exec</dataFile>
 					<excludes>
-						<exclude>**/id/ac/unpar/siamodels/matakuliah</exclude>
+						<exclude>id/ac/unpar/siamodels/matakuliah/*</exclude>
 					</excludes>
                 </configuration>
                 <executions>
@@ -46,18 +47,18 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+				<version>3.6.1</version>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
                 </configuration>
             </plugin>
         </plugins>
-        <sourceDirectory>src/main/java/id/ac/unpar/siamodels</sourceDirectory>
-        <testSourceDirectory>test/main/java/id/ac/unpar/siamodels</testSourceDirectory>
     </build>
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     
     <reporting>
