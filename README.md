@@ -1,6 +1,4 @@
-[![Build Status](https://travis-ci.org/johanes97/SIAModels.svg?branch=master)](https://travis-ci.org/johanes97/SIAModels)
-
-# SIAModels
+# SIAModels [![Build Status](https://travis-ci.org/johanes97/SIAModels.svg?branch=master)](https://travis-ci.org/johanes97/SIAModels)
 Java classes representing objects available in UNPAR's Sistem Informasi Akademik. Requires Java 1.8.
 
 ## Prerequisites
