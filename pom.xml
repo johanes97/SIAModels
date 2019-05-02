@@ -13,6 +13,8 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+	<name>Proyek Informatika</name>
+	<url>http://maven.apache.org</url>
     
     <build>
         <plugins>
@@ -46,18 +48,20 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+				<version>3.6.1</version>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
                 </configuration>
             </plugin>
         </plugins>
-        <sourceDirectory>src/main/java/id/ac/unpar/siamodels</sourceDirectory>
-        <testSourceDirectory>test/main/java/id/ac/unpar/siamodels</testSourceDirectory>
+        <sourceDirectory>src/main/java</sourceDirectory>
+        <testSourceDirectory>test/main/java</testSourceDirectory>
     </build>
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     
     <reporting>
